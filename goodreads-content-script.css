@@ -1,0 +1,11 @@
+.BookReviewsPage__pageHeader {
+    position: sticky;
+    top: 90.5px;
+    z-index: 1;
+    background: white;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom: solid 3px #6e7491;
+    padding-left: 10px;
+    width: 106%
+}

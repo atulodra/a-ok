@@ -1,0 +1,42 @@
+{
+    "manifest_version": 3,
+    "name": "A-OK",
+    "description": "Different snippets for various sites for better quality of life and experience.",
+    "version": "0.1",
+    "action": {},
+    "permissions": ["tabs"],
+    "host_permissions": [
+        "*://*.tutflix.io/*",
+        "*://*.youtube.com/*",
+        "*://*.vk.com/docs"
+      ],
+    "background": {
+        "service_worker": "background.js"
+      },
+    "content_scripts": [
+        {
+          "matches": ["*://*.tuiost.edu.np/*"],
+          "js": ["tuiost-content-script.js"]
+        },
+        {
+            "matches": ["*://*.goodreads.com/book/show/*"],
+            "css": ["goodreads-content-script.css"]
+        },
+        {
+            "matches": ["*://*.goodreads.com/review/list/*"],
+            "js": ["goodreads-list-content-script.js"]
+        },
+        {
+            "matches": ["*://*.vk.com/docs"],
+            "js": ["vk-content-script.js"]
+        },
+        {
+            "matches": ["*://*.libgen.is/fiction/*"],
+            "js": ["libgenfiction-content-script.js"]
+        },
+        {
+            "matches": ["*://*.libgen.is/"],
+            "js": ["libgen-content-script.js"]
+        }
+      ]
+}
